@@ -1,0 +1,29 @@
+
+This repository contains a template of the application that reads 
+The Complete Works of William Shakespeare from a text file into a Stream<String>
+
+2. In WordCount class,
+ implement main method such that it will output the list containing:
+
+word
+number of times the word is used in the Complete Works of Shakespeare
+The list must be ordered from most used to least used, an example:
+
+the        23245
+I        20245
+and        18575
+to        15809
+of        15700
+a        12535
+you        11952
+my        10828
+IMPORTANT HINTS
+
+1. Use line.split("[()\"!?,;.\\s]+") to split the line into words, 
+taking into accout punctuation symbols
+
+2. Use groupingBy(..) collector with counting() downstream collector
+ to get the map of word to word count.
+
+3. Convert the map to stream and sort this stream by map
+ values using sorted method and providing a Comparator.
